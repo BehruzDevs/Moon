@@ -6,16 +6,84 @@
     <title>Moon</title>
     <link rel="stylesheet" href="./css/main.css">
     <style type="text/tailwindcss">
-        @theme {
-          --color-clifford: #da373d;
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
         }
-      </style>
+      }
+    </style>
 </head>
 <body>
-    <header class="w-[1250px] mx-auto">
-
-    </header>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    
+    <section class="space-section xl:pt-[40px] pt-[24px] md:pt-[0] relative z-0">
+      <div class="containers">
+        <div class="navbar-section flex items-center justify-between">
+          <a href="/">
+            <img src=".//images/logo.svg" class="md:w-[48px] md:h-[48px]" alt="Logo img" width="48" height="48">
+          </a>
+          <span class="hidden xl:block xl:w-[400px] xl:h-[1px] xl:bg-[#979797]"></span>
+          <ul class="navbar-list hidden md:flex md:items-center md:gap-[37px] xl:gap-[48px] xl:pl-[123px] xl:pr-[165px] md:px-[39px]">
+            <li class="xl:flex xl:items-center xl:gap-[12px] w-auto py-[48px] border-b-[3px] border-transparent hover:border-white duration-300">
+                <span class="hidden xl:block font-bold text-[16px] leading-[19.2px] text-white">00</span>
+                <a class="text-[14px] leading-[16.8px] tracking-[2.36px] xl:tracking font-normal text-white xl:text-[16px] xl:leading-[19.2px]" href="/">HOME</a>
+            </li>
+            <li class="xl:flex xl:items-center xl:gap-[12px] w-auto py-[48px] border-b-[3px] border-transparent hover:border-white duration-300">
+                <span class="hidden xl:block font-bold text-[16px] leading-[19.2px] text-white">01</span>
+                <a class="text-[14px] leading-[16.8px] tracking-[2.36px] xl:tracking font-normal text-white xl:text-[16px] xl:leading-[19.2px]" href="/">DESTINATION</a>
+            </li>
+            <li class="xl:flex xl:items-center xl:gap-[12px] w-auto py-[48px] border-b-[3px] border-transparent hover:border-white duration-300">
+                <span class="hidden xl:block font-bold text-[16px] leading-[19.2px] text-white">02</span>
+                <a class="text-[14px] leading-[16.8px] tracking-[2.36px] xl:tracking font-normal text-white xl:text-[16px] xl:leading-[19.2px]" href="/">CREW</a>
+            </li>
+            <li class="xl:flex xl:items-center xl:gap-[12px] w-auto py-[48px] border-b-[3px] border-transparent hover:border-white duration-300">
+                <span class="hidden xl:block font-bold text-[16px] leading-[19.2px] text-white">03</span>
+                <a class="text-[14px] leading-[16.8px] tracking-[2.36px] xl:tracking font-normal text-white xl:text-[16px] xl:leading-[19.2px]" href="/">TECHNOLOGY</a>
+            </li>
+        </ul>
+        <button class="md:hidden" onclick="handleMenuBtnClick()">
+          <img src="./images/handleBtnOpen.svg" class="w-[24px] h-[21px]" alt="Handle btn img">
+        </button>
+        </div>
+        <div class="space-wrapper xl:pl-[110px] xl:pb-[131px] xl:pt-[251px] flex items-center xl:flex-row flex-col mx-auto md:gap-[156px] gap-[81px] xl:gap-[386px] pb-[48px] pt-[48px] md:pt-[106px] md:pb-[90px]">
+          <div class="w-[327px] md:w-[450px] xl:text-start text-center">
+            <h2 class="font-normal md:mb-[24px] mb-[16px] xl:m-0 xl:text-[28px] xl:leading-[33.6px] xl:tracking-[3.7px] md:text-[20px] md:leading-[24px] md:tracking-[3.38px] text-[#D0D6F9] text-[16px] leading-[19.2px] tracking-[2.7px]">SO, YOU WANT TO TRAVEL TO</h2>
+            <span class="font-[&quot;Bellefair&quot;,sans-serif] font-normal text-[80px] leading-[100px] md:text-[150px] text-white md:leading-[150px] xl:leading-[171.9px] md:mt-[24px]">SPACE</span>
+            <p class="mt-[16px] text-[15px] leading-[25px] md:mt-[24px] font-normal md:text-[16px] md:leading-[28px] xl:text-[18px] xl:eading-[32px] text-white">Let’s face it; if you want to go to space, you might as well 
+              genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of 
+              this world experience!
+            </p>
+          </div>
+          <a href="/">
+            <img src="./images/explore.png" class="w-[150px] h-[150px] md:w-[242px] md:h-[242px] xl:w-[274px] xl:h-[274px] xl:mt-[108px]" alt="Explore img" width="274" height="274">
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="menu xl:hidden w-[254px] h-[150vh] z-50 pt-[33.95] pl-[32px] fixed top-0 right-[-100%] duration-500">
+      <div class="absolute top-[33.95px] right-[26px]">
+          <button onclick="handleCloseMenu()">
+              <img src="./images/handleBtnCloseMenu.svg" alt="Close icon" width="27" height="27">
+          </button>
+      </div>
+      <ul class="mt-[118px] space-y-[32px]">
+        <li class="border-r-[3px] border-transparent hover:border-white duration-300 space-x-[12px]">
+            <span class="font-bold text-[16px] leading-[19.2px] text-white tracking-[2.7px]">00</span>
+            <a class="font-normal text-white text-[16px] leading-[19.2px]" href="/">HOME</a>
+        </li>
+        <li class="border-r-[3px] border-transparent hover:border-white duration-300 space-x-[12px]">
+            <span class="font-bold text-[16px] leading-[19.2px] text-white tracking-[2.7px]">01</span>
+            <a class="font-normal text-white text-[16px] leading-[19.2px]" href="/">DESTINATION</a>
+        </li>
+        <li class="border-r-[3px] border-transparent hover:border-white duration-300 space-x-[12px]">
+            <span class="font-bold text-[16px] leading-[19.2px] text-white tracking-[2.7px]">02</span>
+            <a class="font-normal text-white text-[16px] leading-[19.2px]" href="/">CREW</a>
+        </li>
+        <li class="border-r-[3px] border-transparent hover:border-white duration-300 space-x-[12px]">
+            <span class="font-bold text-[16px] leading-[19.2px] text-white tracking-[2.7px]">03</span>
+            <a class="font-normal text-white text-[16px] leading-[19.2px]" href="/">TECHNOLOGY</a>
+        </li>
+    </ul>
+  </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
