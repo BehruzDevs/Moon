@@ -44,6 +44,7 @@
 }
 @media (min-width:1280px){
     body {
+        height: 100vh;
         background-image: url("./../images/Bitmap.png");
         background-repeat: no-repeat;
         background-size: cover;
@@ -52,6 +53,7 @@
 }
 @media (max-width:1280px){
     body {
+        height: 100vh;
         background-image: url("./../images/bitmap-tablet.png");
         background-repeat: no-repeat;
         background-size: cover;
