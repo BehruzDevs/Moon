@@ -46,7 +46,7 @@
     body {
         background-image: url("./../images/Bitmap.png");
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100vh;
         font-family: "Barlow",sans-serif;
     }
 }
@@ -54,7 +54,7 @@
     body {
         background-image: url("./../images/bitmap-tablet.png");
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100vh;
         font-family: "Bellefair",serif;
         font-family: "Barlow",sans-serif;
     }
